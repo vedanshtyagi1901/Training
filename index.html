@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1000-Day Discipline Challenge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #141E30, #243B55);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #f39c12;
+        }
+
+        h3 {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #1abc9c;
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        ul li {
+            font-size: 16px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: #2ecc71;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .counter {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💪 1000-Day Discipline Challenge 💪</h1>
+        <h2>📅 Start Date: 2nd March 2024, 7:30 AM</h2>
+
+        <h3>🏋️ Training</h3>
+        <ul>
+            <li>⏰ <b>Wake Up:</b> 5:00 AM</li>
+            <li>🧠 <b>LeetCode:</b> Solve 1 question</li>
+            <li>🏋️ <b>Exercise:</b> 30 min intense workout</li>
+            <li>🌞 <b>Sunlight & Speaking:</b> 20 min sunlight + English speaking</li>
+            <li>💪 <b>Self-Control:</b> NOFAP - NOPEN - NOPON - Respect Girls - Control Brain - Believe in God</li>
+            <li>🎯 <b>Productivity:</b> Complete daily targets</li>
+        </ul>
+
+        <div class="counter">
+            ⏳ Days Passed: <span id="daysPassed">0.00</span>
+        </div>
+
+        <div class="footer">🚀 Stay disciplined. Success is inevitable! 🚀</div>
+    </div>
+
+    <script>
+        function updateDaysPassed() {
+            const startDate = new Date("March 2, 2025 07:30:00").getTime();
+            const now = new Date().getTime();
+            const timeDiff = now - startDate;
+            const daysPassed = (timeDiff / (1000 * 60 * 60 * 24)).toFixed(2);
+            document.getElementById("daysPassed").innerText = daysPassed;
+        }
+
+        updateDaysPassed();
+        setInterval(updateDaysPassed, 1000); // Update every second
+    </script>
+</body>
+</html>
